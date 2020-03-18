@@ -1,0 +1,36 @@
+<div class="container">
+<div class="border">
+	<table ng-table="userTableParams"
+		class="table table-bordered table-striped table-condensed"
+		show-filter="true">
+		<tr ng-repeat="row in $data" ng-click="issueDeatils(row);">
+			<td data-title="'Task Name'" sortable="'taskName'"
+				filter="{ 'taskName': 'text' }">{{row.taskName}}</td>
+			<td data-title="'Description'" sortable="'taskDescription'"
+				filter="{ 'taskDescription': 'text' }">{{row.taskDescription}}</td>
+				<td data-title="'Location'" sortable="'taskLocation'"
+				filter="{ 'taskLocation': 'text' }">{{row.taskLocation}}</td>
+				<td data-title="'TimeLimit'" sortable="'taskTimeLimit'"
+				filter="{ 'taskTimeLimit': 'text' }">{{row.taskTimeLimit}}</td>
+				<td data-title="'Budget'" sortable="'taskBudget'"
+				filter="{ 'taskBudget': 'text' }">{{row.taskBudget}}</td>
+				<td data-title="'Rating'" sortable="'taskRating'"
+				filter="{ 'taskRating': 'text' }">{{row.taskRating}}</td>
+				<td data-title="'Completed'" 
+				filter="{ 'taskCompleted': 'text' }">{{row.taskCompleted}}</td>
+				<td data-title="'Assigned'" sortable="'taskAssigned'"
+				filter="{ 'taskAssigned': 'text' }">{{row.taskAssigned}}</td>
+				
+				<td ng-if ="!isClient" data-title="'Mark Task Complete'"><span class="glyphicon glyphicon-ok" ng-click = "markTaskComplete(row.taskId)"></span></td>
+				<td ng-if ="isClient" data-title="'Enter Ratings'">
+				 <input type="text" ng-disabled = "!row.taskCompleted" class="form-control" name="rating" id="rating" placeholder="Rating" ng-model = "row.clientRating">
+				</td>
+				<td ng-if ="isClient"  data-title="'Submit Ratings'"><span class="btn btn-default" ng-disabled = "!row.taskCompleted" value = "Submit" ng-click = "submitRating(row.clientRating,row.taskId)"></span></td>
+		</tr>
+		<tr ng-if="$data == undefined || $data == null || $data == ''">
+			<td colspan="8" class="td-center">Search not matching given
+				criteria.</td>
+		</tr>
+	</table>
+</div>
+</div>

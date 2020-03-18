@@ -1,0 +1,20 @@
+<div ng-controller="ManageUsersController" class="border" style="border-bottom: white;">
+	<table ng-table="tableParams" class="table table-hover">
+		<thead class="table-thead">
+			<tr>
+				<td>Email</td>
+				<td>First Name</td>
+				<td>Last Name</td>
+				<td>Edit</td>
+				<td>Remove</td>
+			</tr>
+		</thead>
+		<tr ng-repeat="user in users">
+			<td>{{user.email}}</td>
+			<td>{{user.firstName}}</td>
+			<td>{{user.lastName}}</td>
+			<td class="text-muted"><span><a	ng-click="openEditUser('',user);" style="color: black; margin-left: 6px"><i class="glyphicon glyphicon-pencil"></i></a></span></td>
+			<td class="text-muted"><span><a	ng-click="deleteUser(user.id)" style="cursor: pointer; margin-left: 16px; color: black;"><i class="glyphicon glyphicon-remove"></i></a></span></td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,59 @@
+<div class="container">
+  <form class="form-horizontal" role="form" ng-submit = "createTask()">
+    <fieldset>
+      <legend>Please Enter Task Details</legend>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="name">Name</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="name" id="name" placeholder="Name" ng-model = "task.taskName">
+        </div>
+      </div>
+	<div class="form-group">
+        <label class="col-sm-3 control-label" for="description">Description</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="description" id="description" placeholder="Description" ng-model = "task.taskDescription">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="location">Location</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="location" id="location" placeholder="Location" ng-model = "task.taskLocation">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="timeLimit">Time Limit</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="timeLimit" id="timeLimit" placeholder="Time Limit" ng-model = "task.taskTimeLimit">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="budget">Budget</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="budget" id="budget" placeholder="Budget" ng-model = "task.taskBudget">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="skills">Required Skills</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="skills" id="skills" placeholder="Required Skills" ng-model = "task.requiredSkills">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="skills">Required Credibility</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="requiredCredibiliy" id="requiredCredibiliy" placeholder="Required Credibility" ng-model = "task.requiredCredibiliy">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+          <button type="submit" class="btn btn-success">Create</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>

@@ -1,0 +1,32 @@
+<h4>Compose New Message</h4>
+<form class="form-horizontal" role="form">
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="to">To</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="to"
+				placeholder="Announcement to mail address" ng-model="announcement.to">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="from">From</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="from"
+				placeholder="Announcement from mail address " ng-model="announcement.from">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="subject">Subject</label>
+		<div class="col-sm-10">
+			<input type="email" class="form-control" id="subject"
+				placeholder="Announcement subject" ng-model="announcement.subject">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="comments">Comments</label>
+		<div class="col-sm-10">
+			<textarea type="about" class="form-control" id="comments"
+				placeholder="Announcement comments" ng-model="announcement.content"></textarea>
+		</div>
+	</div>
+	<button type="submit" class="btn btn-default" ng-click="updateAnnouncement(announcement)">Update</button>
+</form>

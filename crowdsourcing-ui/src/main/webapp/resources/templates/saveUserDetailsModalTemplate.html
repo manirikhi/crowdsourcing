@@ -1,0 +1,59 @@
+<div class="modal-header">
+	<h3 class="modal-title">Add User</h3>
+</div>
+<div class="modal-body" style="margin: 10px;">
+<div class="row">
+<form name="userForm" role="form" novalidate>
+                          	<!-- EMAIL -->
+      <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+          <label>Email Id</label>
+          <input type="email" name="email" class="form-control" ng-model="newUser.email" required placeholder="Please enter email here">
+          <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+      </div>
+      
+      <!-- First Name -->
+      <div class="form-group" ng-class="{ 'has-error' : userForm.firstName.$invalid && !userForm.firstName.$pristine }">
+          <label for="firstName">First Name</label>
+          <input class="form-control" type="text" name="firstName" ng-model="newUser.firstName" id="firstName" required placeholder="Please enter first name here"/>
+          <p ng-show="userForm.firstName.$invalid && !userForm.firstName.$pristine" class="help-block">First Name is required.</p>
+      </div>
+      
+      <!-- Last Name -->
+      <div class="form-group" ng-class="{ 'has-error' : userForm.lastName.$invalid && !userForm.lastName.$pristine }">
+          <label for="lastName">Last Name</label>
+          <input class="form-control" type="text" name="lastName" ng-model="newUser.lastName" id="lastName" required placeholder="Please enter last name here"/>
+          <p ng-show="userForm.lastName.$invalid && !userForm.lastName.$pristine" class="help-block">Last Name is required.</p>
+      </div>
+
+<!-- Password -->
+       <div class="form-group" ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine }">
+           <label for="password">Password</label>
+           <input class="form-control" type="password" name="password" ng-model="newUser.password" id="password" required placeholder="**********"/>
+           <p ng-show="userForm.password.$invalid && !userForm.password.$pristine" class="help-block">Password is required.</p>
+       </div>
+       
+       <!-- About user -->
+       <div class="form-group">
+           <label for="about">About user</label>
+           <textarea class="form-control" rows="3" ng-model="newUser.about" id="about"></textarea>
+       </div>
+       
+       <!-- Gender -->
+      	<div class="form-group" ng-class="{ 'has-error' : userForm.gender.$invalid && !userForm.gender.$pristine }">
+           <label for="gender">Gender</label>
+               <label class="radio-inline">
+                   <input type="radio" name="gender" ng-model="newUser.gender" id="gender" value="MALE" ng-required="!newUser.gender">Male
+               </label>
+               <label class="radio-inline">
+                   <input type="radio" name="gender" ng-model="newUser.gender" id="gender" value="FEMALE" ng-required="!newUser.gender">Female
+               </label>
+               <p ng-show="userForm.gender.$invalid && !userForm.gender.$pristine" class="help-block">Gender is required.</p>
+       </div>
+</form>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-disabled="customerForm.$invalid" ng-click="save(newUser)">Save</button>
+	<button type="reset" class="btn btn-warning" ng-click="resetUser(userForm);">Reset</button>
+	<button class="btn btn-warning" ng-click="close()">Close</button>
+</div>

@@ -1,0 +1,46 @@
+ <div id="login-page" class="row">
+    <div class="col s12 z-depth-6 card-panel">
+      <form class="login-form" action="registerUser" method="post">
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="firstName" name="firstName" type="text" class="validate">
+            <label for="firstName" class="center-align">First Name</label>
+          </div>
+        </div>
+		<div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="lastName" name="lastName" type="text" class="validate">
+            <label for="lastName" class="center-align">Last Name</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-communication-email prefix"></i>
+            <input id="email" type="email" name="email" class="validate">
+            <label for="email" class="center-align">Email</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            <input id="user-pw" name="password" type="password" class="validate">
+            <label for="user-pw">Password</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            <input id="password-again" type="password">
+            <label for="password-again">Re-type password</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s3 offset-s9 right">
+			<input class="btn waves-effect waves-light col s12" name="commit" type="submit" value="Register Now" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,73 @@
+<div class="row">
+	<section class="12u 12u(narrower)">
+	<form style="margin: 20px;" name="userForm" ng-submit = "saveUser()" role="form" novalidate>	
+		<div class="row" style="margin: 20px;">
+			
+		</div>		
+			<div class="row">
+				<div class="4u 12u(narrower)">
+				<div style="margin-left: 30px; margin-top: 50px;">
+				<label class="radio-inline"><input type="radio"
+					name="userType" ng-model="user.userType" ng-value="false">Client</label>
+				<label class="radio-inline"><input type="radio"
+					name="userType" ng-model="user.userType" ng-value="true">Worker</label>
+					</div>
+			</div>
+				<div class="4u 12u(narrower)" ng-class="{ 'has-error' : userForm.firstName.$invalid && !userForm.firstName.$pristine }">
+					<label for="firstName">First Name:</label> <input type="text"
+						name="firstName" ng-model="user.details.firstName" id="firstName" required placeholder="First Name" />
+						<p ng-show="userForm.firstName.$invalid && !userForm.firstName.$pristine" class="help-block">First Name is required.</p>
+				</div>
+				<div class="4u 12u(narrower)" ng-class="{ 'has-error' : userForm.lastName.$invalid && !userForm.lastName.$pristine }">
+					<label for="lastName">Last Name:</label> <input type="text"
+						name="lastName" ng-model="user.details.lastName" id="lastName" required placeholder="Last Name" />
+						 <p ng-show="userForm.lastName.$invalid && !userForm.lastName.$pristine" class="help-block">Last Name is required.</p>
+				</div>
+				
+			</div>
+			<div class="row">
+			<div class="4u 12u(narrower)" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+					<label for="email">Email:</label> <input type="email" name="email"
+						id="email" ng-model="user.details.email" placeholder="Email" />
+						<p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+				</div>
+				<div class="4u 12u(narrower)" ng-class="{ 'has-error' : userForm.phoneNumber.$invalid && !userForm.phoneNumber.$pristine }">
+					<label for="phoneNumber">Phone Number:</label> <input type="text"
+						name="phoneNumber" ng-model="user.details.phoneNumber" id="phoneNumber" required placeholder="Phone Number" />
+						<p ng-show="userForm.phoneNumber.$invalid && !userForm.phoneNumber.$pristine" class="help-block">Valid phone number is required.</p>
+				</div>
+
+				<div class="4u 12u(narrower)" ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine }">
+					<label for="password">Password:</label> <input type="password"
+						name="password" ng-model="user.details.password" id="password" required placeholder="Password" />
+						<p ng-show="userForm.password.$invalid && !userForm.password.$pristine" class="help-block">Password is required.</p>
+				</div>
+
+				<div class="4u 12u(narrower)" ng-if="user.userType">
+				<label for="about">Worker Location:</label>
+					<input type="text" name="workerLocation" ng-model="user.workerLocation" id="workerLocation"
+						placeholder="Worker Location" />
+				</div>
+				<div class="4u 12u(narrower)" ng-if="user.userType">
+				<label for="skills">Enter Your Skills:</label>
+					<input type="text" name="skills" ng-model="user.skills" id="skills"
+						placeholder="Worker Location" />
+				</div>
+			</div>
+<div class="row">
+				<div class="12u 12u(narrower)">
+					<label for="about">About:</label>
+					<textarea name="about"  ng-model="user.details.about" id="about" placeholder="About" rows="2"></textarea>
+				</div>
+		</div>
+<div class="row">
+	<div class="12u">
+		<ul class="actions pull-right">
+			<li><input type="submit" ng-disabled="userForm.$invalid" class="button alt" value="Register" /></li>
+		</ul>
+	</div>
+</div>
+
+</form>
+</section>
+</div>

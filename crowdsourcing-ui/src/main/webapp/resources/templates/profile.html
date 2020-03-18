@@ -1,0 +1,76 @@
+<div class="row">
+	<section class="12u 12u(narrower)">
+	<form style="margin: 20px;" ng-submit = "saveUser()">					
+			<div class="row">
+				<div class="4u 12u(narrower)">
+					<label for="firstName">First Name:</label> <input type="text"
+						name="firstName" ng-model="user.details.firstName" id="firstName" placeholder="First Name" ng-disabled = "disable"/>
+				</div>
+				<div class="4u 12u(narrower)">
+					<label for="lastName">Last Name:</label> <input type="text"
+						name="lastName" ng-model="user.details.lastName" id="lastName" placeholder="Last Name" ng-disabled = "disable" />
+				</div>
+				<div class="4u 12u(narrower)">
+					<label for="email">Email:</label> <input type="email" name="email"
+						id="email" ng-model="user.details.email" placeholder="Email" ng-disabled = "disable"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="4u 12u(narrower)">
+					<label for="phoneNumber">Phone Number:</label> <input type="text"
+						name="phoneNumber" ng-model="user.details.phoneNumber" id="phoneNumber" placeholder="Phone Number" ng-disabled = "disable"/>
+				</div>
+
+				<div class="4u 12u(narrower)">
+					<label for="password">Password:</label> <input type="password"
+						name="password" ng-model="user.details.password" id="password" placeholder="Password" ng-disabled = "disable"/>
+				</div>
+
+				<div class="4u 12u(narrower)">
+					<label for="about">About:</label>
+					<textarea name="about"  ng-model="user.details.about" id="about" placeholder="About" rows="5" ng-disabled = "disable"></textarea>
+				</div>
+			</div>
+
+			<div class="row" ng-if="user.userType">
+				<div class="4u 12u(narrower)" >
+				<label for="about">Worker Location:</label>
+					<input type="text" name="workerLocation" id="workerLocation"
+						placeholder="Worker Location" ng-disabled = "disable"/>
+				</div>
+				<div class="4u 12u(narrower)">
+				<label for="about">Enter Your Skills:</label>
+					<textarea name="skills" id="skills" placeholder="Skills" rows="5" ng-disabled = "disable"></textarea>
+				</div>
+			</div>
+			
+			<div class="row" ng-if="!isClient">
+				<div class="4u 12u(narrower)" >
+				<label for="about">Worker Location:</label>
+					<input type="text" name="workerLocation" id="workerLocation"
+						placeholder="Worker Location" />
+				</div>
+				<div class="4u 12u(narrower)">
+				<label for="about">Enter Your Skills:</label>
+					<textarea name="skills" id="skills" placeholder="Skills" rows="5"></textarea>
+				</div>
+			</div>
+			
+		<div class="row">
+			<div class="12u" ng-if = "disable">
+				<ul class="actions pull-right">
+					<li><input type="button" class="button alt" value="Edit" ng-click = "enableEdit()"/></li>
+				</ul>
+		</div>
+		
+	<div class="12u" ng-if = "!disable">
+		<ul class="actions pull-right">
+			<li><input type="submit" class="button alt" value="Submit" /></li>
+		</ul>
+	</div>
+		
+</div>
+
+</form>
+</section>
+</div>

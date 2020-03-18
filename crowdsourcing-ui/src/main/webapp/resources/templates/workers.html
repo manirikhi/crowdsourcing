@@ -1,0 +1,26 @@
+<div class="container">
+<div class="border">
+	<table ng-table="tableParams"
+		class="table table-bordered table-striped table-condensed"
+		show-filter="true">
+		<tr ng-repeat="row in $data">
+		<td data-title="'First Name'" sortable="'details.firstName'"
+				filter="{ 'details.firstName': 'text' }">{{row.details.firstName}}</td>
+		<td data-title="'Last Name'" sortable="'details.lastName'"
+				filter="{ 'details.lastName': 'text' }">{{row.details.lastName}}</td>
+			<td data-title="'Skills'" sortable="'skills'"
+				filter="{ 'skills': 'text' }">{{row.skills}}</td>
+			<td data-title="'Work Location'" sortable="'workerLocation'"
+				filter="{ 'workerLocation': 'text' }">{{row.workerLocation}}</td>
+				<td data-title="'Worker Experience'" sortable="'workExperience'"
+				filter="{ 'workExperience': 'text' }">{{row.workExperience}}</td>
+				<td data-title="'Worker Credibility'" sortable="'workCredibility'"
+				filter="{ 'workCredibility': 'text' }">{{row.workCredibility}}</td>
+		</tr>
+		<tr ng-if="$data == undefined || $data == null || $data == ''">
+			<td colspan="8" class="td-center">Search not matching given
+				criteria.</td>
+		</tr>
+	</table>
+</div>
+</div>
