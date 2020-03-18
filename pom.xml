@@ -11,7 +11,7 @@
   	<module>crowdsourcing-ui</module>
   </modules>
   <properties>
-		<spring.framework.version>4.1.8.RELEASE</spring.framework.version>
+		<spring.framework.version>5.2.4.RELEASE</spring.framework.version>
 		<spring.integration.version>3.0.4.RELEASE</spring.integration.version>
 		<mongo.java.driver>3.2.2</mongo.java.driver>
 		<spring.data.mongodb>1.8.4.RELEASE</spring.data.mongodb>
