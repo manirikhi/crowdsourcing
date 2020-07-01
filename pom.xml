@@ -22,7 +22,7 @@
 		<junit.version>4.11</junit.version>
 		<slf4j.version>1.7.7</slf4j.version>
 		<mockito.version>1.8.4</mockito.version>
-		<log4j.core.version>2.0</log4j.core.version>
+		<log4j.core.version>2.13.2</log4j.core.version>
 		<commons.lang.version>2.6</commons.lang.version>
 		<commons.io.version>2.4</commons.io.version>
 		<commons.fileupload.version>1.2</commons.fileupload.version>
