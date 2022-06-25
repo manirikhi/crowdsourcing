@@ -14,7 +14,7 @@
 		<spring.framework.version>4.1.8.RELEASE</spring.framework.version>
 		<spring.integration.version>3.0.4.RELEASE</spring.integration.version>
 		<mongo.java.driver>3.2.2</mongo.java.driver>
-		<spring.data.mongodb>1.8.4.RELEASE</spring.data.mongodb>
+		<spring.data.mongodb>3.3.5</spring.data.mongodb>
 		<spring.data.commons.core>1.4.1.RELEASE</spring.data.commons.core>
 		<cglib.version>2.2.2</cglib.version>
 		<maven.compiler.source>1.7</maven.compiler.source>
